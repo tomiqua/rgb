@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="rgb.css">
+
+    <title>RGB Color Game</title>
+</head>
+
+<body>
+    <h1> "The Great <span id="secret"></span> RGB Guessing Game" </h1>
+
+    <div class="boxes">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        </div>
+         <div class="boxes">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    <script src="rgb.js"></script>
+</body>
+
+</html>
+<!-- Create your HTML and CSS files
+.
+
+In your CSS file, give the body a background color of rgb(35, 35, 35).  You will also need to change your h1 text color to white.
+
+For this game, we want our interface to be responsive -- i.e. shrink down if the user has a smaller screen, or get bigger if they have a big screen.  But for the divs we created in Step 2, this presents a problem.  A good way to make things responsive is to specify values as a percent of the parent element (e.g. width: 30%). And percentage-based widths work well on divs (since the width is computed as a percent of the containing element, i.e. the body of the page, which by default is as wide as the screen).  
+
+But it turns out that height is a problem: it does not show up unless there is either (1) text or image content inside the div (which we don't have here), or (2) we specify height using fixed units like pixels.  But we don't want a fixed unit, since we're trying to make the page responsive.  So what do we do?  One CSS trick is to use a percentage value, but put it inside the padding. 
+
+Give your divs (except the container) a width of 30% and a background color of purple.  Now add either a padding-top or padding-bottom of 30% to the div class you created in Step #2.
+
+Make the container class a flexbox container.  Give it a max-width of 600 pixels.  (This is a maximum width, so our page remains responsive).
+
+Now, if you add margin: auto to the container class, your grid of squares should move to the center (the auto does this).  Meanwhile, text-align: center will do the same for your h1.  
+
+While you're at it, give the class for the squares a margin of 1.66% so you can see the individual boxes.
+
+Now create a JavaScript file and test that it's working (for example, put alert("connected") as the only line in your JavaScript file; when you load your HTML page, the pop-up box should appear).
+
+Delete the alert from Step #9 and create an array of strings, each of which uses the maximum and minimum values for the three RGB color components.  (Eventually we will replace this list with a randomly-generated list of colors, but this is a good place to start).  Here are the values: 
+rgb(255, 0, 0)
+rgb(255, 255, 0)
+rgb(0, 255, 0)
+rgb(0, 255, 255)
+rgb(0, 0, 255)
+rgb(255, 0, 255)
+
+Now select all 6 colored divs from the HTML page (using a DOM selector starting with document...) and store them in a variable called squares or something similar.
+
+Loop through all six squares on your HTML page and assign the six colors in your array, to those squares.
+Hint: this will look something like this: squares[index].style.backgroundColor = colors[index])
+
+When we play the finished game, every time the HTML page loads, the color you’re trying to guess will appear after the word "RGB" in the header.  For now, let’s hard-code that value.  Declare a variable to store the "secret" color, and set it equal to one of the colors in your array.
+
+Now display the RGB color specified in Step #13 in the middle of your h1.  You can use a span to do this. The RGB value from your secret color variable should replace the word "RGB" in the h1. You can use something like: variable_name.innerHTML = secretColor; -->
